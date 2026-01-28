@@ -1,0 +1,12 @@
+all: testvalgrind1 testvalgrind2
+
+testvalgrind1: testvalgrind1.c
+	gcc -g -fsanitize=undefined -Wall $< -o $@
+
+testvalgrind2: testvalgrind2.c
+	gcc -g -fsanitize=undefined -Wall $< -o $@
+
+.PHONY: clean
+
+clean:
+	-rm testvalgrind1 testvalgrind2
