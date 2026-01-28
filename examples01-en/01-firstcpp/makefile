@@ -1,0 +1,7 @@
+hellocpp: hellocpp.cpp
+	g++ -g -Wall -pedantic $< -o $@
+
+.PHONY: clean
+
+clean:
+	-rm hellocpp
